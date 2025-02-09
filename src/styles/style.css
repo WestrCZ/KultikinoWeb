@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #E58B7B; /* Red */
+    --secondary-color: #A1BDE0; /* Light Blue */
+    --cream-color: #F5E1A4; /* Adjusted Cream */
+}
+
+html {
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding-top: 60px;
+}
+
+/* Header and Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--cream-color);
+    z-index: 1000;
+    height: 60px;
+}
+
+#header-logo {
+    padding: 7px;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    display: inline;
+    left: 1%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Navigation Link Styling */
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 16px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Active Link */
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a.active {
+    color: var(--primary-color); /* Red */
+    font-weight: bold;
+}
+
+/* Active Link Underline Animation */
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+/* Section Styling */
+section {
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: whitesmoke;
+    padding-top: 60px; /* Prevents section from being covered by fixed header */
+}
+
+/* Background Images for Sections */
+#about {
+    background-image: url(../img/about-bg.jpg);
+    background-position: 70% 20%;
+}
+
+#schedule {
+    background-image: url(../img/program-bg.jpg);
+}
+
+#location {
+    background-image: url(../img/location-bg.jpg);
+}
+
+#team {
+    background-image: url(../img/team-bg.jpg);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Contact Section Styling */
+#contact {
+    background: linear-gradient(to top, var(--primary-color) 0%, var(--secondary-color) 18%);
+    color: whitesmoke;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+}
