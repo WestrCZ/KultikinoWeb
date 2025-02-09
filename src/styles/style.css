@@ -98,8 +98,8 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
+    padding-top: 80px; /* Adjusted to provide more space from header */
     color: whitesmoke;
-    padding-top: 60px; /* Prevents section from being covered by fixed header */
 }
 
 /* Background Images for Sections */
